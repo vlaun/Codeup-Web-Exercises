@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+    <head>
+        <meta charset="UTF-8">
+        <title>My First HTML Form</title>
+    </head>
+    <body>
+        <form method="POST" action="http://requestb.in/1e8a7de1">
+            <p>
+                <label for="username">Username</label>
+                <input id="username" name="username" type="text">
+            </p>
+            <p>
+                <label for="password">Password</label>
+                <input id="password" name="password" type="password">
+            </p>
+            <p>
+                <input type="submit">
+            </p>
+        </form>
+
+        <h2>Compose An Email</h2>
+        <form>
+            <p>
+                <label for="from">From</label>
+                <input text="text" name="from" id="from" placeholder="enter your email" required>
+            </p>
+            <p>
+                <label for="to">To</label>
+                <input text="text" name="to" id="to" placeholder="recepient" required>
+        </form>
+        <form>
+            <p>
+                <label for="subject">Subject</label>
+                <input text="text" name="subject" id="subject" placeholder="subject" required>
+            </p>
+        </form>
+        <form>
+            <p>
+            <textarea id="email_body" name="email_body">Content Here</textarea>
+            </p>
+            <p>
+                <input type="checkbox" id="save copy to sent folder" name="save copy to sent folder" value="yes">
+                <label for="save copy to sent folder">Save copy to sent folder</label>
+            </p>
+        </form>
+        <h2>Multiple Choice Test</h2>
+            <p>What are your favorite things to eat?</p>
+            <label>
+                <input type="radio" name="q1" value="Chinese food">
+                Chinese Food
+            </label>
+            <label>
+                <input type="radio" name="q1" value="Mexican food">
+                Mexican Food
+            </label>
+            <label>
+                <input type="radio" name="q1" value="Indian food">
+                Indian Food
+            </label>
+            <p>
+        <p>Which sports to you prefer?</p>
+            <label>
+            <input type="radio" name="q1" value="basketball">
+            Basketball
+            </label>
+            <label>
+            <input type="radio" name="q1" value="football">
+            Football
+            </p>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+.image {
+    background-image: url ("13620802_10208705233019681_8258248349373857863_n.jpg");
+    border-image: round;
+    background-color: aliceblue;
+    width: 200px;
+    background-size: 200px;
+    text-align: center;
+    height: auto;
+    padding: 0px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10em;
+}
+.h1 {
+    text-align: center;
+}
+.h4 {
+    text-align: center;
+}
+nav li {
+    display: inline;
+    margin-right: 0px;
+    margin-left: 0px;
+    font-weight: bold;
+    font-family: Times;
+    font-size: larger;
+}
+
+.main-menu {
+    padding: 0px;
+}
+.main-menu a {
+    margin-left: 2em;
+    margin-right: 2em;
+}
+.footer {
+    display: block;
+    font-size: x-small;
+    border: none;
+}
