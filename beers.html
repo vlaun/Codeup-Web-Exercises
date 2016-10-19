@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>inline</title>
+</head>
+<body>
+
+<script>
+    var bottlesOfBeer = 99;
+    while (bottlesOfBeer > 0) {
+        //of bottlesOfBeer is 1, then use "bottle" instead of bottles;
+        if (bottlesOfBeer == 2) {
+            console.log(bottlesOfBeer + "bottles of beer on the wall.");
+            console.log(bottlesOfBeer + "bottle of beer!");
+            console.log("take one down and pass it around...");
+            console.log(bottlesOfBeer -1) + "bottle of beer on the wall";
+        } else if (bottlesOfBeer == 1) {
+            console.log(bottlesOfBeer + "bottles of beer on the wall.");
+            console.log(bottlesOfBeer + "bottle of beer!");
+            console.log("take one down and pass it around...");
+            console.log("No more bottles of beer on the wall");
+        } else {
+            console.log(bottlesOfBeer + "bottles of beer on the wall.");
+            console.log(bottlesOfBeer + "bottle of beer!");
+            console.log("take one down and pass it around...");
+            console.log(bottlesOfBeer -1) + "bottle of beer on the wall";
+        }
+
+        bottlesOfBeer--;
+    }
+</script>
+</body>
+</html>

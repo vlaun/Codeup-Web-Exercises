@@ -3,7 +3,7 @@ nav li {
     margin-right: 15px;
 }
 .image {
-    background-image: url("960.jpg");
+    background-image: url("../img/960.jpg");
     width: 960px;
     background-size: px;
     text-align: center;

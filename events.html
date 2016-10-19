@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Events exercise</title>
+
+</head>
+<body>
+<form>
+    <label for="name">Name</label>
+    <input type="text" id="name">
+</form>
+
+<p id="hello"></p>
+
+
+<a href="#">Click me</a>
+
+<script>
+
+    var greetButton = document.getElementsByTagName("button");
+    greetButtons [0].addEventListener("click", function (event) {
+        event.preventDefault();
+
+        var name = document.getElementsById("name").value;
+        console.log(name);
+
+        var hello = document.getElementById("hello");
+        hello.innerText = "Hello <strong>" + name + "</strong>";
+    });
+
+
+    var anchors = document.getElementsByTagNam("a"); //select an element
+    //attach an event to it
+    anchors[0].addEventListener('click', function () {
+        console.log("You have clicked on a link!");
+    });
+
+</script>
+</body>
+</html>

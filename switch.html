@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang= "en">
+<head>
+    <meta charset="UTF-8">
+    <title>Switch</title>
+</head>
+<body>
+    <script>
+            //Control structures
+            //if
+            var totalInDollars = 100;
+            var currency = "MXN";
+
+            if (currency == 'MXN') {
+               total = totalInDollars * 19.26
+            } else if (currency == "CNY") {
+                total = totalInDollars * 1.11;
+            }
+            //MXN 19.26
+            //CNY 1.5
+            //EUR 1.11
+
+
+            //another structure available called switch
+            switch (/*variable*/currency) {
+                case "MXN": //{
+                    total = totalInDollars * 19.26;
+                    break; //}
+                case "CNY": //{
+                    total = totalInDollars * 1.5;
+                    break; //}
+                case "EUR": //{
+                    total = totalInDollars * 1.11;
+                    break; //}
+
+            }
+            console.log(total);

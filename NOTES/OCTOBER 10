@@ -1,0 +1,30 @@
+Espression (Type)
+    *Literal value,
+        *2, "Hello world", false
+    *Operations expression
+        *
+'USE STRICT';
+//4 parts of a function are:  function, name of the function, parameter and the body {}
+
+var square = function(number) {
+    return number * number;
+}
+
+function square(numer ) {
+return number * number;
+}
+
+function isEven(input) {
+    var remainder = input % 2;
+    if  (remainder === 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+
+function sum(a, b) {
+    return a + b;
+}
+console.log(isEven(square(sum(square(2), square(3)))));

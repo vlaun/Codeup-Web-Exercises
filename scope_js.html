@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scope JS</title>
+</head>
+<body>
+
+<script src="js/scope.js">
+
+    (function () {
+        var random = Math.floor((Math.random() * 100) + 1);
+
+        function isOdd(number) {
+            var remainder = number % 2
+            if (remainder !== 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        console.log(isOdd(random));
+        console.log(isOdd(33));
+    })();
+</script>
+</body>
+</html>

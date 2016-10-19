@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Break-Continue</title>
+</head>
+<body>
+
+<script src="js/breakcontinue.js">
+        "use strict"
+    //SOLUTION FOR BREAK-CONTINUE EXERCISE
+    //generate a random number between 1 and 50 .  save this as your "favorite" number to skip
+
+    do{
+        var rand = Math.floor(Math.random() * 50) + 1;
+    } while (rand % 2 == 0)
+
+    //use a loop, output if a number is odd, skip if it's your "favorite"
+    //use reak when the loop hits 50
+    //use continue to "skip"
+    for (var i = 1; i <= 50; i++) {
+            if (i == rand) {
+                console.log(skipping + i, "because it's my favorite number");
+                continue;
+            }
+            if (i % 2 != 0 {
+                console.log ("Here is an odd number: " + 1);
+            if (i >= 50) {
+                break; //use if you want to terminate earlier that what the loop is set at
+            }
+        }
+</script>
+</body>
+</html>

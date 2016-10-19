@@ -1,11 +1,10 @@
 .image {
     background-image: url ("13620802_10208705233019681_8258248349373857863_n.jpg");
     border-image: round;
-    background-color: aliceblue;
     width: 200px;
     background-size: 200px;
     text-align: center;
-    height: auto;
+    height: ;300
     padding: 0px;
     display: block;
     margin-left: auto;

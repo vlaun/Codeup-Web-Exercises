@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Iterating</title>
+</head>
+<body>
+
+<script>
+    var myCar = {
+        "make": "Toyota",
+        "model": {
+            "modelName": "tacoma",
+            "trimPackage": "nothing special",
+            "suspension": "sport"
+        },
+        "getName": function() {
+            return this.model.modelName
+        }
+        "honk": function() {
+            console.log("HONK");
+        },
+        "miles": 55000,
+        "getMiles": function() {
+            return this.miles;
+        },
+        "setMiles": function(miles) {
+            this.miles += parseFloat(miles);
+        }
+    };
+
+</script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <form name = calcform>
+        <div>
+            <input type="text" id="leftoperand" readonly>
+            <input type="text" id="operator" readonly>
+            <input type="text" id="rightoperand" readonly>
+        </div>
+
+        <div>
+            <button type="button" class="calcbtn" value="C">C</button>
+            <button type="button" class="calcbtn" value="+/-">+/-</button>
+            <button type="button" class="calcbtn" value="%">%</button>
+            <button type="button" class="calcbtn" value="/">/</button>
+        </div>
+
+        <div>
+            <button type="button" class="calcbtn" value="7">7</button>
+            <button type="button" class="calcbtn" value="8">8</button>
+            <button type="button" class="calcbtn" value="9">9</button>
+            <button type="button" class="calcbtn" value="*">*</button>
+        </div>
+
+        <div>
+            <button type="button" class="calcbtn" value="4">4</button>
+            <button type="button" class="calcbtn" value="5">5</button>
+            <button type="button" class="calcbtn" value="6">6</button>
+            <button type="button" class="calcbtn" value="-">-</button>
+        </div>
+
+        <div>
+            <button type="button" class="calcbtn" value="1">1</button>
+            <button type="button" class="calcbtn" value="2">2</button>
+            <button type="button" class="calcbtn" value="3">3</button>
+            <button type="button" class="calcbtn" value="+">+</button>
+        </div>
+
+        <div>
+            <button type="button" class="calcbtn" value="0">0</button>
+            <button type="button" class="calcbtn" value=".">.</button>
+            <button type="button" class="calcbtn" value="=">=</button>
+        </div>
+</form>
+
+<script>
+
+    var leftOperand = document.getElementById('leftoperand');
+    var operator = document.getElementById('operator');
+    var rightOperand = document.getElementById('rightoperand');
+    var buttons = document.getElementsByClassName('calcbtn');
+
+    var display = function () {
+        var button = this.getAttribute('value');
+        console.log(button);
+
+        if (button == "/" || "*" || "-" || "+") {
+            operator.value = button;
+        } else if(operator.value == "") {
+            leftOperand.value += button;
+        } else if (button == "=") {
+            calculate();
+        } else {
+            rightOperand.value += button;
+        }
+    };
+
+
+
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener('click', display, false);
+        console.log("I work");
+    };
+
+
+</script>
+</body>
+</html>
+
+

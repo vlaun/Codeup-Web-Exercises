@@ -1,0 +1,8 @@
+Array manipulation
+
+
+var daysOfTheWeek = [
+    'Monday', 'Tuesday', 'Wednesday', 'Thursday'
+    ];
+
+    //Add elements

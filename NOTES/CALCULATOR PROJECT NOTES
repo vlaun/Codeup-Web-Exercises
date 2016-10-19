@@ -1,0 +1,60 @@
+Things a calculator does
+What can you see and do with a calculator
+--
+
+#group activity - list out features a calculator.
+    -take in input
+        -add event listers to each button
+        -determine what we want that function or functions to do
+            Options:
+            1.  add a new function for each button
+                ex. add function, five function, etc..
+
+            2.  add the same function on each button's click event
+                ex. function handleButton () {
+                var objectJustClicked = this;
+                if objectJustClicked.getAttribute('class') == "number") {
+                    handleNumber(objectJustClicked);
+                } else if(objectJustClicked.getAttribute('class') == "operator") {
+                } ....
+              }
+            3.  add an event lister to buttons that are numbers that calls the handleNumber()
+                function/, then add event lister to buttons that are operators that calls handleOperator()
+
+    - determining if the button is a number or an operator
+        -if the button is a number,keep appending the numbers
+        -if the button clicked is an operator - get ready to accept the next numberic input
+        -if the operator display has something in it, then put new numberic inputs to the 2nd number display
+        -how to handle a clear button (does it clear everything that was inputed) - reset variables
+        -since it's JS, don't forget that "1" + 1 = "11", parseInt("1") + parseInt(1) = 2
+
+If your displays are HTML inputs - then you'll use the .value attribute to paint the screen
+If your displays are other HTML elements - use .innerHTML or .innerText
+
+
+
+    -calculate the result
+    -produce output
+    -get the output onto the screen
+
+    ##Yes, the process can be oversimplified to input->process->output, but what's really
+      going on step by tiny step
+   ###List out the specific steps that need to happen in order to
+
+
+   <button id="one"></button>
+
+   document.getElementById('one')
+        .addEventListener('click', function() {
+            //if there's no operator selected yet, paint the number one to the left input
+            //if there is an operator selected, paint the number one to the right output
+         });
+
+   document.getElementById('multiply')
+        .addeventListener('click', function() {
+            var leftInput = document.getElemen tById('leftInput').value;
+            var rightInput = docuent.getElementById('rightInput').value;
+            var result = leftInput * rightInput;
+            //clear out all the inputs
+            //set the .value or .innerHTML of the input to hold the nuew result
+         });
