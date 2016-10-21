@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Example jQuery Page</title>
+    <h1 id="codeup">Hello Codeup</h1>
+
+    <div>
+
+        <ul>
+                <li class="">1</li>
+                <li class="codeup"></li>
+                <li>3</li>
+                <li class="codeup">4</li>
+                <li>5</li>
+        </ul>
+
+        <p>lorem ipsum dolor sit amet...</p>
+        <p>lorem ipsum dolor sit amet...</p>
+        <p>lorem ipsum dolor sit amet...</p>
+        <p>lorem ipsum dolor sit amet...</p>
+        <p>lorem ipsum dolor sit amet...</p>
+
+        <button class="btn btn-block btn-primary" id="submit">Submit</button>
+    </div>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('h1').click(function() {
+                        $(this).css('background-color', '#FF0');
+                });
+            $('p').dblclick(function() {
+                $(this).css('font-size', '3em');
+            });
+            $('li').hover(function() {
+                $(this).css('color', 'firebrick');
+            })
+
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>
