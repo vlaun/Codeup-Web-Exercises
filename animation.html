@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Animations</title>
+    <style>
+
+        .square {
+            height: 200px;
+            width: 200px;
+            position: absolute;
+            /*nothing will be animated if there is no position of absolute or relative*/
+        }
+        .green-square{
+            background-color: darkolivegreen;
+        }
+        .red-square {
+            background-color: red;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="green-square" class="square"></div>
+    <div id="red-square" class="square"></div>
+    <div class="square"></div>
+    <script
+        src="https:..code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+
+    <script>
+        var completionAlert = function () {
+            alert("completed!");
+        };
+        $("#green-square").animate({
+        left: "30px",
+        top: "50px",
+        }, 500, competionAlert);
+
+        $("#red-square").animate({
+            left: "+=30px",
+            top: "+=50px"
+        }, 500, competionAlert);
+    </script>
+</body>
+</html>
