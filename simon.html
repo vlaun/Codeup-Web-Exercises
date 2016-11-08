@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Simon Memory Game</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+    <style>
+        body {
+            background-image: url(http://449ijl1gws101a1ktoaq0f8kml.wpengine.netdna-cdn.com/wp-content/uploads/2015/07/shutterstock_175728152-795x380.jpg);
+            background-size: cover;
+        }
+
+        .gameContainer {
+            position:relative;
+            width:440px;
+            height:440px;
+            margin:0 auto;
+            margin-top: 50px;
+            border: solid 1px black;
+            border-radius: 50%;
+            background-color: black;
+        }
+
+        .fourButton {
+            position:absolute;
+            width:190px;
+            height:190px;
+            margin: 20px;
+            pointer-events: none;
+        }
+        .fourButton:active {
+            opacity: .5;
+        }
+
+        #buttonGreen {
+            top:0;
+            left:0;
+            background-image: url(https://static.dreamstime.com/t/green-powder-rotating-pile-turning-slowly-72942198.jpg);
+            border-radius:100% 0 0 0;
+        }
+        #buttonRed {
+            top:0;
+            right:0;
+            background-image: url(https://s-media-cache-ak0.pinimg.com/564x/c6/81/6e/c6816ec14a2e5b223ecd709a1a467938.jpg);
+            border-radius:0 100% 0 0 ;
+        }
+        #buttonYellow {
+            bottom:0;
+            left:0;
+            background-image: url(https://static.dreamstime.com/t/yellow-powder-rotating-pile-turning-slowly-72986820.jpg);
+            border-radius:0 0 0 100%;
+        }
+        #buttonBlue {
+            bottom:0;
+            right:0;
+            background-image: url(https://s-media-cache-ak0.pinimg.com/236x/e5/98/93/e59893363a22289f46bdeb72e38df871.jpg);
+            border-radius:0 0 100% 0 ;
+        }
+        #center {
+            position:absolute;
+            background-image: url(http://www.primeagrofoodproducts.com/images/Dehydrated-White-Onion-Powder.jpg);
+            border: 10px solid black;
+            width:200px;
+            height:200px;
+            top:120px;
+            left:120px;
+            border-radius:50%;
+        }
+        #textTitle {
+            height: 70px;
+            line-height: 90px;
+            width: 100%;
+            text-align: center;
+            font-family: Papyrus;
+            font-weight: bolder;
+            font-size: 40px;
+            color: black;
+        }
+        #countBox {
+            vertical-align: top;
+            display: inline-block;
+            height: 50px;
+            width: 50.3px;
+        }
+        #countDisplay {
+            border: solid 3px black;
+            border-radius: 20%;
+            height: 50%;
+            margin: 0px 6px 0px 6px;
+            background: red;
+            font-size: 20px;
+            line-height: 20px;
+            text-align: center;
+        }
+        #countText {
+            height: 30%;
+            margin: 4px 6px 0px 6px;
+            font-size: 10px;
+            color: black;
+            font-weight: bold;
+            text-align: center;
+        }
+        #displayText {
+            opacity: 0.3;
+        }
+        #startBox {
+            vertical-align: top;
+            display: inline-block;
+            height: 50px;
+            width: 50.4px;
+        }
+        #startButton {
+            border: solid 3px black;
+            border-radius: 50%;
+            height: 50%;
+            margin-right: 20px;
+            background: red;
+            font-size: 20px;
+            line-height: 17px;
+            text-align: center;
+        }
+        #startText {
+            height: 30%;
+            margin: 4px 6px 0px 6px;
+            font-size: 10px;
+            color: black;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        #onText {
+            vertical-align: top;
+            display: inline-block;
+            height: 40px;
+            line-height: 25px;
+            width: 60px;
+            font-size: 10px;
+            color: black;
+            font-weight: bold;
+            text-align: right;
+        }
+        #powerSwitch {
+            background: grey;
+            vertical-align: top;
+            display: inline-block;
+            border: solid 1px black;
+            margin-top: 5px;
+            height: 15px;
+            width: 30px;
+        }
+        #buttonOn {
+            visibility: hidden;
+            background: blue;
+            vertical-align: top;
+            display: inline-block;
+            border-radius: 15%;
+            margin: 1px 2.8px 0px 1px;
+            height: 10px;
+            width: 12px;
+        }
+        #buttonOff {
+            background: blue;
+            vertical-align: top;
+            display: inline-block;
+            border-radius: 15%;
+            margin: 1px 0px 0px 0px;
+            height: 10px;
+            width: 12px;
+        }
+        #offText {
+            vertical-align: top;
+            display: inline-block;
+            height: 40px;
+            line-height: 25px;
+            width: 60px;
+            font-size: 10px;
+            color: black;
+            font-weight: bold;
+        }
+    </style>
+
+
+
+</head>
+<body>
+
+<div class="gameContainer noSelect">
+    <div id="buttonGreen" class="fourButton"></div>
+    <div id="buttonRed" class="fourButton"></div>
+    <div id="buttonYellow" class="fourButton"></div>
+    <div id="buttonBlue" class="fourButton"></div>
+    <div id="center">
+        <div id="textTitle">Simon</div>
+        <div id="countBox">
+            <div id="countDisplay">
+                <div id="displayText">
+                    --
+                </div>
+            </div>
+            <div id="countText">Count</div>
+        </div>
+        <div id="startBox">
+            <div id="startButton"></div>
+            <div id="startText">Start</div>
+        </div>
+
+    <div id="powerBox">
+        <div id="onText">ON</div>
+        <div id="powerSwitch">
+            <div id="buttonOn"></div
+            ><div id="buttonOff"></div
+        ></div>
+        <div id="offText">OFF</div>
+    </div>
+</div>
+</div>
+<script src="js/simon.js">
+
+</script>
+</div>
+</body>
+</html>
+
+
+
