@@ -5,6 +5,7 @@
         <title>My First HTML Form</title>
     </head>
     <body>
+        <div>
         <form method="post" action="http://requestb.in/zfpol5zf">
             <h2>User Login</h2>
             <p>
@@ -16,9 +17,13 @@
                 <input id="password" name="password" type="password" placeholder="Enter password here.">
             </p>
             <p>
-                <button type="submit" >Login</button>
+                <button>Submit</button>
             </p>
+
         </form>
+        </div>
+
+        <div>
         <form method="post" action="http://requestb.in/zfpol5zf">
             <h2>Compose an Email</h2>
 
@@ -40,12 +45,15 @@
                 <label for="body">body</label>
                 <textarea id="body" name="body" rows="5" cols="40"></textarea>
             </p>
+
             <p>
-                <button type="submit">Login</button>
+                <button>Send</button>
             </p>
 
         </form>
+        </div>
 
+        <div>
         <form method="post" action="http://requestb.in/zfpol5zf">
             <h2>Multiple Choice Test</h2>
 
@@ -93,6 +101,36 @@
             <p>
                 <button>Submit</button>
             </p>
+
         </form>
+        </div>
+
+        <div>
+        <form method="post" action="http://requestb.in/zfpol5zf">
+            <h2>Select Testing</h2>
+
+            <label for="dancing">Do you enjoy dancing?</label>
+            <select id="dancing" name="dancing">
+                <option value="2" selected> </option>
+                <option value="1" selected>Yes</option>
+                <option value="0">No</option>
+            </select>
+            <p>
+                <button>Submit</button>
+            </p>
+
+            <label for="season">Which season of the year do you like? </label>
+            <select id="season" name="season[]" multiple>
+                <option value="winter">Winter</option>
+                <option value="spring">Spring</option>
+                <option value="summer">Summer</option>
+                <option value="fall">Fall</option>
+            </select>
+            <p>
+                <button>Submit</button>
+            </p>
+        </form>
+            
+        </div>
     </body>
 </html>
