@@ -6,15 +6,49 @@
         <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
         <title>jQuery</title>
+
+        <script>
+        $(document).ready(function() {
+        var id = $('#information');
+        alert(id.html());
+        });
+        </script>
+
+        <script>
+            $(document).ready(function() {
+                var id = $('#selectors');
+                alert(id.html());
+            });
+        </script>
+
     </head>
     <body>
 
-    <script>
+        <h1>Practice Exercise</h1>
 
-        $(document).ready(function() {
-            alert( 'The DOM has finished loading!' );
-        });
+        <div id="information">
+        <p>I am working on this exercise to practice what I learned in the ID selector lesson.</p>
+        <p>I learned that there are several types of selectors which include:</p>
+        </div>
 
-    </script>
+
+        <div id="selectors" class="list">
+            <ul>
+                <li>ID Selector</li>
+                <li>Class Selector</li>
+                <li>Element Selector</li>
+                <li>Multiple Selector</li>
+            </ul>
+        </div>
+
+
+
+        <script>
+
+            $(document).ready(function() {
+                alert( 'The DOM has finished loading!' );
+            });
+
+        </script>
     </body>
 </html>
